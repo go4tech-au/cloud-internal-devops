@@ -39,7 +39,7 @@ To Install Homebrew, open the Terminal Command Line and run:
 4.- **Install Heroku Command Line Interface**:  
 Once you have the Heroku account created, you have to install the Heroku Command Line tool for creating and managing Heroku applications from the command line / shell.
 
-- For **Windows** intallation, download and run the Windows installer [here](https://cli-assets.heroku.com/heroku-cli/channels/stable/heroku-cli-x64.exe).
+- For **Windows** intallation, download and run the Windows installer [here](https://cli-assets.heroku.com/heroku-cli/channels/stable/heroku-cli-x64.exe) and setup it with the default options.
   
 -  For **macOS** open a terminal command line and run:  
 
@@ -51,6 +51,12 @@ brew install heroku/brew/heroku
 
 ```javascript
 wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
+```
+
+- For **all platform** to check out the installation, open a command line terminal and type:   
+ 
+```javascript
+heroku version
 ```
 
 5.- **Install Node.js and npm**:  
@@ -73,7 +79,7 @@ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-- To check the installation run in your terminal command line:
+- For **all platform** to check the installation run in your terminal command line:
 
 ```javascript
 # Node.js version
@@ -85,23 +91,11 @@ npm -v
 6.- **Install Git / Git Bash (Microsoft Windows)**
 
 - For **Windows** download [Here](https://gitforwindows.org/) the latest installer. Once the file has been download successfully, you have to start the installation process configuring it with the default options.  
-
-- Confirm the installation was successful by typing from the Command Prompt (or Git Bash):
-
-```javascript
-git --version
-```
  
 - For **macOS** using Homebrew, open a terminal command line and run:
   
 ```javascript
 brew install git
-```
-
-- Confirm the installation was successful by typing which:
-
-```javascript
-git --version
 ```
 
 *As an alternative installation option you can get the  installer from [here](https://sourceforge.net/projects/git-osx-installer/files/
@@ -114,7 +108,7 @@ sudo apt-get update
 sudo apt-get install git
 ```
 
-- Confirm the installation was successful by typing:
+- For **all platform** to confirm the installation was successful by typing:
 
 ```javascript
 git --version
