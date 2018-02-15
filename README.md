@@ -124,4 +124,178 @@ By default Windows, macOS, and Linux systems have a default and basic text edito
 
 Other options are: [Atom](https://atom.io/), [Visual Studio Code](https://code.visualstudio.com/download) or Brackets (you only need to have *one* of those or any other one). 
 
+## Deploying a Node.js Apps on a cloud Platform as a Service in this particular case on Heroku
 
+1.- Configure your email account to associate and use the control version application along with Heroku before deploy the example application. 
+
+```javascript
+git config --global user.name "FirstName SecondName"
+git config --global user.email youremailaccount@youremailservice.com
+```
+
+- To confirm the configuration type: 
+ 
+```javascript
+git config -l
+```
+2.- Login into Heroku using your credential:
+
+```javascript
+heroku login
+```
+
+- You will see something like this:
+
+```javascript
+C:>heroku login
+Enter your Heroku credentials:
+Email: youremailaccount@youremailservice.com
+Password: ************
+Logged in as youremailaccount@youremailservice.com
+```
+
+3.- Setup your application
+
+In this step you are going to setup the sample application. For doing it the first thing you have to do is clone it using *git*:
+
+- To clone the sample repository type the following command:
+
+```javascript
+git clone https://github.com/go4tech-au/cloud-internal-devops.git
+```
+
+- The output seems like this:
+
+```javascript
+Cloning into 'cloud-internal-devops'...
+remote: Counting objects: 29, done.
+remote: Compressing objects: 100% (22/22), done.
+remote: Total 29 (delta 10), reused 22 (delta 6), pack-reused 0
+Unpacking objects: 100% (29/29), done.
+```
+
+- Enter to the directory application from the command line:
+
+```javascript
+cd cloud-internal-devops
+```
+
+At this point you have the git repository that contains a simple application that includes for instance, a package.json file, which is used by NodeJS dependency manager.
+
+- Now you are able to create the application. In this case you are going to provide the name that you like based in the your **youremailaccount** name:
+
+```javascript
+heroku create youremailaccount
+```
+
+- Output:
+
+```javascript
+Creating  youremailaccount... done
+https://youremailaccount.herokuapp.com/ | https://git.heroku.com/youremailaccount.git
+```
+
+As you can see in the output information it creates a git remote (called heroku) that is also associated with your local git repository. To confirm this type:
+
+```javascript
+git remote -v
+```
+
+4- Deploy the application
+
+In this moment, you are able to deploy the code :).  In the command line run the following command:
+
+```javascript
+git remote -v
+```
+
+- If everything goes well, the output should look like this:
+
+```javascript
+C:\Users\vagrant\Documents\PaaS\cloud-internal-devops>git push heroku master
+Counting objects: 29, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (28/28), done.
+Writing objects: 100% (29/29), 15.50 KiB | 3.10 MiB/s, done.
+Total 29 (delta 10), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote:
+remote: -----> Node.js app detected
+remote:
+remote: -----> Creating runtime environment
+remote:
+remote:        NPM_CONFIG_LOGLEVEL=error
+remote:        NPM_CONFIG_PRODUCTION=true
+remote:        NODE_VERBOSE=false
+remote:        NODE_ENV=production
+remote:        NODE_MODULES_CACHE=true
+remote:
+remote: -----> Installing binaries
+remote:        engines.node (package.json):  8.9.1
+remote:        engines.npm (package.json):   unspecified (use default)
+remote:
+remote:        Resolving node version 8.9.1...
+remote:        Downloading and installing node 8.9.1...
+remote:        Using default npm version: 5.5.1
+remote:
+remote: -----> Restoring cache
+remote:        Skipping cache restore (not-found)
+remote:
+remote: -----> Building dependencies
+remote:        Installing node modules (package.json + package-lock)
+remote:        added 61 packages in 1.792s
+remote:
+remote: -----> Caching build
+remote:        Clearing previous node cache
+remote:        Saving 2 cacheDirectories (default):
+remote:        - node_modules
+remote:        - bower_components (nothing to cache)
+remote:
+remote: -----> Build succeeded!
+remote: -----> Discovering process types
+remote:        Procfile declares types     -> (none)
+remote:        Default types for buildpack -> web
+remote:
+remote: -----> Compressing...
+remote:        Done: 17.8M
+remote: -----> Launching...
+remote:        Released v3
+remote:        https://youremailaccount.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/youremailaccount.git
+ * [new branch]      master -> master
+```
+
+- And finally you are able to check out your application living in the cloud!
+
+```javascript
+https://youremailaccount.herokuapp.com/index.html
+```
+
+
+
+## Check logs and manage / configure resources 
+
+Create, build and deploy an application is only the begining of its life's cycle, since you have to be sure that is working as expected therefore you need to know if the resources are setting up in a proper way to allow that. 
+
+In order to achieve the above, one of the most important tasks is get and analyze the logging information since it provide you feedback about the activity and performance of the application as well as information about any problems that occur. 
+
+- To check the logs of your application run the following command:
+
+```javascript
+heroku logs --tail
+```
+
+- Now open again your application to see logging information
+
+```javascript
+https://youremailaccount.herokuapp.com/index.html
+```
+
+- Change the endpoint of the url:
+
+```javascript
+https://youremailaccount.herokuapp.com/about.html
+```
