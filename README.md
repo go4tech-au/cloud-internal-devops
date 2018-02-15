@@ -9,13 +9,13 @@ To start the exercise you need to have installed/created the following component
 1.- Email account (for linking it with Heroku account)  
 2.- Heroku account  
 3.- If you are using Unix-like platform, a Package Manager and depending of the OS:  
-3a.- MacOs: Homebrew  
+3a.- macOS: Homebrew  
 3b.- Linux (Debian/Ubuntu based systems): apt-get/aptitude  
 4.- Heroku Command Line Interface (CLI)  
 5.- Node.js and npm  
 6.- Git / Git Bash (Microsoft Windows)  
 7a.- Powershell or CMD (Microsoft Windows Command Prompt) if you are using a Microsoft Windows  
-7b.- Terminal prompt if you are using a Unix-like platform (MacOs or Linux)  
+7b.- Terminal prompt if you are using a Unix-like platform (macOS or Linux)  
 8.- Simple Text editor (for instance, Notepad, Notepad ++)  
 
 
@@ -29,7 +29,7 @@ As a suggestion you can create an [Gmail](https://en.wikipedia.org/wiki/Gmail) a
 For creating an Heroku account you just need to have an email account and provide the necessary information as your name, country and the development language (in this case you have to chose node.js since the exercise is based on this particular technology) [here](https://signup.heroku.com). 
 
 3.- **Install the Package Manager**:  
-This step only apply if you are using a *MacOS* system because in a Linux platform normally the package manager is already install by default.  
+This step only apply if you are using a *macOS* system because in a Linux platform normally the package manager is already install by default.  
 To Install Homebrew, open the Terminal Command Line and run:
 
 ```javascript
@@ -39,7 +39,7 @@ To Install Homebrew, open the Terminal Command Line and run:
 4.- **Install Heroku Command Line Interface**:  
 Once you have the Heroku account created, you have to install the Heroku Command Line tool for creating and managing Heroku applications from the command line / shell.
   
--  For **MacOs** open a terminal command line and run:  
+-  For **macOS** open a terminal command line and run:  
 
 ```javascript
 brew install heroku/brew/heroku
@@ -56,7 +56,7 @@ For the training purpose we are going to use **Node.js** as a program language a
 
 - For **Microsoft Windows** platform get the proper installer from https://nodejs.org/en/download/ . Normally the Windows Installer (.msi) 64-bit version
 
-- For **MacOS** platform using Homebrew, open a terminal command line and run: 
+- For **macOS** platform using Homebrew, open a terminal command line and run: 
 
 ```javascript
 brew install node
@@ -90,7 +90,7 @@ npm -v
 git --version
 ```
  
-- For **MacOS** using Homebrew, open a terminal command line and run:
+- For **macOS** using Homebrew, open a terminal command line and run:
   
 ```javascript
 brew install git
@@ -120,10 +120,10 @@ git --version
 
 If you would like to know more about how to use git [here you are a book's link](https://git-scm.com/book/en/v2) to understand everything about **git**. Enjoy it ;)!
 
-7.- **Install Powershell or CMD (Microsoft Windows Command Prompt) if you are using a Microsoft Windows or Terminal command line if you are using a Unix-like platform (MacOs or Linux)**  
+7.- **Install Powershell or CMD (Microsoft Windows Command Prompt) if you are using a Microsoft Windows or Terminal command line if you are using a Unix-like platform (macOS or Linux)**  
 In most cases, you do not need to install anything since by default these applications are already installed .
 
 8.- **Install a simple text editor**  
-By default Windows, MacOs, and Linux systems have a default and basic text editor already installed, but most of them are not user friendly so as an alternative option (and because is one of the popular ones), you can install Sublime Text editor from  [here](https://www.sublimetext.com/3)
+By default Windows, macOS, and Linux systems have a default and basic text editor already installed, but most of them are not user friendly so as an alternative option (and because is one of the popular ones), you can install Sublime Text editor from  [here](https://www.sublimetext.com/3)
 
 Other options are: [Atom](https://atom.io/), [Visual Studio Code](https://code.visualstudio.com/download) or Brackets (you only need to have *one* of those or any other one). 
