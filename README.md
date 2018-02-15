@@ -38,6 +38,8 @@ To Install Homebrew, open the Terminal Command Line and run:
 
 4.- **Install Heroku Command Line Interface**:  
 Once you have the Heroku account created, you have to install the Heroku Command Line tool for creating and managing Heroku applications from the command line / shell.
+
+- For **Windows** intallation, download and run the Windows installer [here](https://cli-assets.heroku.com/heroku-cli/channels/stable/heroku-cli-x64.exe).
   
 -  For **macOS** open a terminal command line and run:  
 
@@ -127,3 +129,5 @@ In most cases, you do not need to install anything since by default these applic
 By default Windows, macOS, and Linux systems have a default and basic text editor already installed, but most of them are not user friendly so as an alternative option (and because is one of the popular ones), you can install Sublime Text editor from  [here](https://www.sublimetext.com/3)
 
 Other options are: [Atom](https://atom.io/), [Visual Studio Code](https://code.visualstudio.com/download) or Brackets (you only need to have *one* of those or any other one). 
+
+
