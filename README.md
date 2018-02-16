@@ -206,13 +206,12 @@ git remote -v
 In this moment, you are able to deploy the code :).  In the command line run the following command:
 
 ```javascript
-git remote -v
+git push heroku master
 ```
 
 - If everything goes well, the output should look like this:
 
 ```javascript
-C:\Users\vagrant\Documents\PaaS\cloud-internal-devops>git push heroku master
 Counting objects: 29, done.
 Delta compression using up to 2 threads.
 Compressing objects: 100% (28/28), done.
