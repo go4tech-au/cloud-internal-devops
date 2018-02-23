@@ -6,6 +6,7 @@ In this exercise we are going to create a simple web application using a particu
 
 To start the exercise you need to have installed/created the following components:
 
+0.- Admin access for installing software in your computer
 1.- Email account (for linking it with Heroku account)  
 2.- Heroku account  
 3.- If you are using Unix-like platform, a Package Manager and depending of the OS:  
