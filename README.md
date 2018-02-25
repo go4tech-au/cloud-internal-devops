@@ -278,7 +278,7 @@ https://youremailaccount.herokuapp.com/index.html
 
 ## 3.- Check logs 
 
-Create, build and deploy an application is only the begining of its life's cycle, since you have to be sure it is working as expected. In order to achieve this, one of the most important tasks is get and analyze the logging information because it provides you feedback about the activity and performance of the application as well as information about any problems that the application is having. 
+Create, build and deploy an application is only the beginning of its life's cycle, since you have to be sure it is working as expected. In order to achieve this, one of the most important tasks is get and analyze the logging information because it provides you feedback about the activity and performance of the application as well as information about any problems that the application is having. 
 
 - To check the logs of your application run the following command:
 
@@ -300,7 +300,7 @@ https://youremailaccount.herokuapp.com/about.html
 
 1.- Create a new application release:
 
-Once the public AWS S3 bucket has been created, change in the *index.html* file unsing your text editor application, the code-lines that reference the images configuration that need to be loaded on the web page:
+Once the public AWS S3 bucket has been created, change in the *index.html* file using your text editor application, the code-lines that reference the images configuration that need to be loaded on the web page:
 
 
 - In the line number 7 of the file *index.html*:
@@ -365,7 +365,7 @@ git add index.html
 git commit -m "changing images endpoint to a public S3 bucket"
 ```
 
-- And finally, push the changes to the heroku repository, that is going to deploy the application as well:
+- And finally, push the changes to the Heroku repository, that is going to deploy the application as well:
 
 ```javascript
 git commit -m "changing images endpoint to a public S3 bucket"
@@ -403,7 +403,7 @@ Scaling an application on Heroku is equivalent to changing the number of dynos t
 heroku ps:scale web=0
 ```
 
-Access the app again by hitting refresh on the web tab, or heroku open to open it in a web tab. What do you think that is happening? (Do you remember how to check the log information)
+Access the app again by hitting refresh on the web tab, or Heroku open to open it in a web tab. What do you think that is happening? (Do you remember how to check the log information)
 
 Scale it up again:
 
@@ -413,4 +413,4 @@ heroku ps:scale web=0
 
 Access the app again by hitting refresh on the web tab, or heroku open to open it in a web tab.
 
-If everithing goes good you have learnt the basic step about how to start the DevOps journey building an application based on a Platform as a Service cloud solution!! congratulations!!!
+If everything goes good you have learnt the basic step about how to start the DevOps journey building an application based on a Platform as a Service cloud solution!! congratulations!!!
