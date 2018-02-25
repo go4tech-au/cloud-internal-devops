@@ -314,7 +314,7 @@ href="https://github.com/verofa/SimpleSample_HTML-NodeJs/blob/master/images/clou
 - To this:
 
 ```javascript
-href="https://s3.ap-southeast-2.amazonaws.com/g4t-begginer-ws-01/cloud_logo.png"
+href="https://s3.ap-southeast-2.amazonaws.com/g4t-beginner-ws-01/cloud_logo.png"
 ```
 
 - In the line number 19 of the file *index.html*:
@@ -328,7 +328,7 @@ href="https://openclipart.org/download/238921/1453940593.svg"
 - To this:
 
 ```javascript
-href="https://s3.ap-southeast-2.amazonaws.com/g4t-begginer-ws-01/Thumbs-Up.svg"
+href="https://s3.ap-southeast-2.amazonaws.com/g4t-beginner-ws-XX/Thumbs-Up.svg"
 ```
 
 - In the line number 20 of the file *index.html*:
@@ -342,7 +342,7 @@ href="https://github.com/verofa/SimpleSample_HTML-NodeJs/blob/master/images/DevO
 - To this:
 
 ```javascript
-href="https://s3.ap-southeast-2.amazonaws.com/g4t-begginer-ws-01/DevOpsCarsalesLogo.png"
+href="https://s3.ap-southeast-2.amazonaws.com/g4t-beginner-ws-01/DevOpsCarsalesLogo.png"
 ```
 
 After that, you need to apply and deploy the new changes of your application using the version control program in this case Github typing the following commands:
