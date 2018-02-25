@@ -278,9 +278,9 @@ https://youremailaccount.herokuapp.com/index.html
 
 ## Check logs and manage / configure resources 
 
-Create, build and deploy an application is only the begining of its life's cycle, since you have to be sure that is working as expected therefore you need to know if the resources are setting up in a proper way to allow that. 
+Create, build and deploy an application is only the begining of its life's cycle, since you have to be sure it is working as expected so to accomplish it you need to know if the resources are set up in a proper way. 
 
-In order to achieve the above, one of the most important tasks is get and analyze the logging information since it provide you feedback about the activity and performance of the application as well as information about any problems that occur. 
+In order to achieve the above, one of the most important tasks is get and analyze the logging information because it provides you feedback about the activity and performance of the application as well as information about any problems that the application is having. 
 
 - To check the logs of your application run the following command:
 
