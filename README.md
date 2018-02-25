@@ -278,9 +278,7 @@ https://youremailaccount.herokuapp.com/index.html
 
 ## Check logs and manage / configure resources 
 
-Create, build and deploy an application is only the begining of its life's cycle, since you have to be sure it is working as expected so to accomplish it you need to know if the resources are set up in a proper way. 
-
-In order to achieve the above, one of the most important tasks is get and analyze the logging information because it provides you feedback about the activity and performance of the application as well as information about any problems that the application is having. 
+Create, build and deploy an application is only the begining of its life's cycle, since you have to be sure it is working as expected. In order to achieve this, one of the most important tasks is get and analyze the logging information because it provides you feedback about the activity and performance of the application as well as information about any problems that the application is having. 
 
 - To check the logs of your application run the following command:
 
@@ -298,4 +296,14 @@ https://youremailaccount.herokuapp.com/index.html
 
 ```javascript
 https://youremailaccount.herokuapp.com/about.html
+```
+
+1.- Create a new application release:
+
+Once the public AWS S3 bucket has been created, change in the *index.html* file the code-lines that reference the images configuration that need to be loaded on the web page:
+
+From this:
+
+```javascript
+href="https://github.com/verofa/SimpleSample_HTML-NodeJs/blob/master/images/cloud_logo.png?raw=true"
 ```
