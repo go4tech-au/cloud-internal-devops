@@ -386,3 +386,31 @@ heroku logs --tail
 - Can you see the images with the new endpoint configuration? (if the answer is yes, well done and congratulation! and if the answer in no, it does not matter because "We learn from our mistakes" :))
 
 ## 4.- Manage / configure resources 
+
+Heroku works with dyno that is a lightweight container (a tiny virtual machine) that runs the command specified in a configuration file (in this case the Procfile)
+
+By default, your app is deployed on a free dyno. Free dynos will sleep after a half hour of inactivity (if they don’t receive any traffic). This causes a delay of a few seconds for the first request upon waking. 
+
+- To check how many dynos are running type the following command line:
+
+```javascript
+heroku ps
+```
+
+Scaling an application on Heroku is equivalent to changing the number of dynos that are running. Scale the number of web dynos to zero:
+
+```javascript
+heroku ps:scale web=0
+```
+
+Access the app again by hitting refresh on the web tab, or heroku open to open it in a web tab. What do you think that is happening? (Do you remember how to check the log information)
+
+Scale it up again:
+
+```javascript
+heroku ps:scale web=0
+```
+
+Access the app again by hitting refresh on the web tab, or heroku open to open it in a web tab.
+
+If everithing goes good you have learnt the basic step about how to start the DevOps journey building an application based on a Platform as a Service cloud solution!! congratulations!!!
