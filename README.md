@@ -20,7 +20,7 @@ To start the exercise you need to have installed/created the following component
 8.- Simple Text editor (for instance, Notepad, Notepad ++)  
 
 
-## How to ^
+## 1.- How to ^
 
 1.- **Create an email account**:  
 As a suggestion you can create an [Gmail](https://en.wikipedia.org/wiki/Gmail) account that has a free basic service [here](https://accounts.google.com/SignUp), but feel free to create an email account in your favorite email service
@@ -125,7 +125,7 @@ By default Windows, macOS, and Linux systems have a default and basic text edito
 
 Other options are: [Atom](https://atom.io/), [Visual Studio Code](https://code.visualstudio.com/download) or Brackets (you only need to have *one* of those or any other one). 
 
-## Deploying a Node.js Apps on a cloud Platform as a Service in this particular case on Heroku
+## 2.- Deploying a Node.js Apps on a cloud Platform as a Service in this particular case on Heroku
 
 1.- Configure your email account to associate and use the control version application along with Heroku before deploy the example application. 
 
@@ -276,7 +276,7 @@ https://youremailaccount.herokuapp.com/index.html
 
 
 
-## Check logs and manage / configure resources 
+## 3.- Check logs 
 
 Create, build and deploy an application is only the begining of its life's cycle, since you have to be sure it is working as expected. In order to achieve this, one of the most important tasks is get and analyze the logging information because it provides you feedback about the activity and performance of the application as well as information about any problems that the application is having. 
 
@@ -300,10 +300,89 @@ https://youremailaccount.herokuapp.com/about.html
 
 1.- Create a new application release:
 
-Once the public AWS S3 bucket has been created, change in the *index.html* file the code-lines that reference the images configuration that need to be loaded on the web page:
+Once the public AWS S3 bucket has been created, change in the *index.html* file unsing your text editor application, the code-lines that reference the images configuration that need to be loaded on the web page:
+
+
+- In the line number 7 of the file *index.html*:
 
 From this:
 
 ```javascript
 href="https://github.com/verofa/SimpleSample_HTML-NodeJs/blob/master/images/cloud_logo.png?raw=true"
 ```
+
+- To this:
+
+```javascript
+href="https://s3.ap-southeast-2.amazonaws.com/g4t-begginer-ws-01/cloud_logo.png"
+```
+
+- In the line number 19 of the file *index.html*:
+
+From this:
+
+```javascript
+href="https://openclipart.org/download/238921/1453940593.svg"
+```
+
+- To this:
+
+```javascript
+href="https://s3.ap-southeast-2.amazonaws.com/g4t-begginer-ws-01/Thumbs-Up.svg"
+```
+
+- In the line number 20 of the file *index.html*:
+
+From this:
+
+```javascript
+href="https://github.com/verofa/SimpleSample_HTML-NodeJs/blob/master/images/DevOpsCarsalesLogo.png?raw=true"
+```
+
+- To this:
+
+```javascript
+href="https://s3.ap-southeast-2.amazonaws.com/g4t-begginer-ws-01/DevOpsCarsalesLogo.png"
+```
+
+After that, you need to apply and deploy the new changes of your application using the version control program in this case Github typing the following commands:
+
+- To check out what file or files are changed:
+
+```javascript
+git status
+```
+
+- To add the new changes to the repository:
+
+```javascript
+git add index.html
+```
+
+- To add a comment about the new changes to the repository:
+
+```javascript
+git commit -m "changing images endpoint to a public S3 bucket"
+```
+
+- And finally, push the changes to the heroku repository, that is going to deploy the application as well:
+
+```javascript
+git commit -m "changing images endpoint to a public S3 bucket"
+```
+
+- Open your application with the new changes:
+
+```javascript
+heroku open
+```
+
+- And check again what is happening in the application analising the log information:
+
+```javascript
+heroku logs --tail
+```
+
+- Can you see the images with the new endpoint configuration? (if the answer is yes, well done and congratulation! and if the answer in no, it does not matter because "We learn from our mistakes" :))
+
+## 4.- Manage / configure resources 
