@@ -368,7 +368,7 @@ git commit -m "changing images endpoint to a public S3 bucket"
 - And finally, push the changes to the Heroku repository, that is going to deploy the application as well:
 
 ```javascript
-git push heroku master"
+git push heroku master
 ```
 
 - Open your application with the new changes:
