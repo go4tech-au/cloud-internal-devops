@@ -189,14 +189,14 @@ At this point you have the git repository that contains a simple application tha
 - Now you are able to create the application. In this case you are going to provide the name that you like based in the your **YourHerokuEmailAccount** name (but you can also name it with the name that you want, but it need to be unique so if you choose one that already exist, you are going to get an error) :
 
 ```javascript
-heroku create youremailaccount
+heroku create YourHerokuEmailAccount
 ```
 
 - Output:
 
 ```javascript
-Creating  youremailaccount... done
-https://youremailaccount.herokuapp.com/ | https://git.heroku.com/youremailaccount.git
+Creating  YourHerokuEmailAccount... done
+https://YourHerokuEmailAccount.herokuapp.com/ | https://git.heroku.com/YourHerokuEmailAccount.git
 ```
 
 As you can see in the output information it creates a git remote (called heroku) that is also associated with your local git repository. To confirm this type:
@@ -264,17 +264,17 @@ remote: -----> Compressing...
 remote:        Done: 17.8M
 remote: -----> Launching...
 remote:        Released v3
-remote:        https://youremailaccount.herokuapp.com/ deployed to Heroku
+remote:        https://YourHerokuEmailAccount.herokuapp.com/ deployed to Heroku
 remote:
 remote: Verifying deploy... done.
-To https://git.heroku.com/youremailaccount.git
+To https://git.heroku.com/YourHerokuEmailAccount.git
  * [new branch]      master -> master
 ```
 
 - And finally you are able to check out your application living in the cloud on a Platform as a Service ([PaaS](https://en.wikipedia.org/wiki/Platform_as_a_service)) solution!
 
 ```javascript
-https://youremailaccount.herokuapp.com/index.html
+https://YourHerokuEmailAccount.herokuapp.com/index.html
 ```
 
 
@@ -292,13 +292,13 @@ heroku logs --tail
 - Now open again your application to see logging information
 
 ```javascript
-https://youremailaccount.herokuapp.com/index.html
+https://YourHerokuEmailAccount.herokuapp.com/index.html
 ```
 
 - Change the endpoint of the url:
 
 ```javascript
-https://youremailaccount.herokuapp.com/about.html
+https://YourHerokuEmailAccount.herokuapp.com/about.html
 ```
 
 1.- Create a new application release:
@@ -361,7 +361,7 @@ From this:
 To this:
 
 ```javascript
-<center><h1 style="font-family:verdana"> YOUT FAVORITE SENETECE HERE </h1></center>
+<center><h1 style="font-family:verdana"> YOUR FAVORITE SENETECE HERE </h1></center>
 ```
 
 After that, you need to apply and deploy the new changes of your application using the version control program in this case **Git** typing the following commands:
