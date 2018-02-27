@@ -30,7 +30,7 @@ As a suggestion you can create an [Gmail](https://en.wikipedia.org/wiki/Gmail) a
 For creating an Heroku account you just need to have an email account and provide the necessary information as your name, country and the development language (in this case you have to chose node.js since the exercise is based on this particular technology) [here](https://signup.heroku.com). 
 
 3.- **Install the Package Manager**:  
-This step only apply if you are using a *macOS* system because in a Linux platform normally the package manager is already install by default.  
+This step only apply if you are using a *macOS* system because in a Linux platform normally the package manager is already installed by default.  
 To Install Homebrew, open the Terminal Command Line and run:
 
 ```javascript
@@ -67,11 +67,12 @@ For the training purpose we are going to use **Node.js** as a program language a
 
 - For **macOS** platform using Homebrew, open a terminal command line and run: 
 
+*Also, as an alternative way you can get the proper installer as well from https://nodejs.org/en/download/ (macOS Installer (.pkg))
+
 ```javascript
 brew install node
 ```
 
-*Also, as an alternative way you can get the proper installer as well from https://nodejs.org/en/download/ (macOS Installer (.pkg))
 
 - For **Debian/Ubuntu** platform open a terminal command line and run:
 
@@ -127,11 +128,11 @@ Other options are: [Atom](https://atom.io/), [Visual Studio Code](https://code.v
 
 ## 2.- Deploying a Node.js Apps on a cloud Platform as a Service in this particular case on Heroku
 
-1.- Configure your email account to associate and use the control version application along with Heroku before deploy the example application. 
+1.- Configure the email account that you has used it in the Heroku account to associate it with the control version application (in this case it correspond to [Git](https://github.com/)) before deploy the simple application or webpage. 
 
 ```javascript
-git config --global user.name "FirstName SecondName"
-git config --global user.email youremailaccount@youremailservice.com
+git config --global user.name "YourFirstName YourLastName"
+git config --global user.email YourHerokuEmailAccount@youremailservice.com
 ```
 
 - To confirm the configuration type: 
@@ -150,20 +151,22 @@ heroku login
 ```javascript
 C:>heroku login
 Enter your Heroku credentials:
-Email: youremailaccount@youremailservice.com
+Email: YourHerokuEmailAccount@youremailservice.com
 Password: ************
-Logged in as youremailaccount@youremailservice.com
+Logged in as YourHerokuEmailAccount@youremailservice.com
 ```
 
 3.- Setup your application
 
-In this step you are going to setup the sample application. For doing it the first thing you have to do is clone it using *git*:
+In this step you are going to setup the sample application. For doing it the first thing you have to do is clone it using one of the most popular control versioning program that is *Git*:
 
 - To clone the sample repository type the following command:
 
 ```javascript
 git clone https://github.com/go4tech-au/cloud-internal-devops.git
 ```
+
+The aim of the above step is to copy the sample source code that is in the remote repository (https://github.com/go4tech-au/cloud-internal-devops.git) to your local machine / personal computer so the result of that is a directory called **cloud-internal-devops**
 
 - The output seems like this:
 
@@ -183,7 +186,7 @@ cd cloud-internal-devops
 
 At this point you have the git repository that contains a simple application that includes for instance, a package.json file, which is used by NodeJS dependency manager.
 
-- Now you are able to create the application. In this case you are going to provide the name that you like based in the your **youremailaccount** name:
+- Now you are able to create the application. In this case you are going to provide the name that you like based in the your **YourHerokuEmailAccount** name (but you can also name it with the name that you want, but it need to be unique so if you choose one that already exist, you are going to get an error) :
 
 ```javascript
 heroku create youremailaccount
@@ -204,7 +207,7 @@ git remote -v
 
 4- Deploy the application
 
-In this moment, you are able to deploy the code :).  In the command line run the following command:
+In this moment, you are able to deploy the code :).  In the command line run the following:
 
 ```javascript
 git push heroku master
@@ -268,7 +271,7 @@ To https://git.heroku.com/youremailaccount.git
  * [new branch]      master -> master
 ```
 
-- And finally you are able to check out your application living in the cloud!
+- And finally you are able to check out your application living in the cloud on a Platform as a Service ([PaaS](https://en.wikipedia.org/wiki/Platform_as_a_service)) solution!
 
 ```javascript
 https://youremailaccount.herokuapp.com/index.html
@@ -345,7 +348,23 @@ href="https://github.com/verofa/SimpleSample_HTML-NodeJs/blob/master/images/DevO
 href="https://s3.ap-southeast-2.amazonaws.com/g4t-beginner-ws-xx/DevOpsCarsalesLogo.png"
 ```
 
-After that, you need to apply and deploy the new changes of your application using the version control program in this case Github typing the following commands:
+Or as an alternative, you can change the text for your favorite sentence in the same file:
+
+- In the line number 17 of the file *index.html*:
+
+From this:
+
+```javascript
+<center><h1 style="font-family:verdana"> Congratulations! you have been deployed your simple HTML static page </h1></center>
+```
+
+To this:
+
+```javascript
+<center><h1 style="font-family:verdana"> YOUT FAVORITE SENETECE HERE </h1></center>
+```
+
+After that, you need to apply and deploy the new changes of your application using the version control program in this case **Git** typing the following commands:
 
 - To check out what file or files are changed:
 
@@ -362,7 +381,7 @@ git add index.html
 - To add a comment about the new changes to the repository:
 
 ```javascript
-git commit -m "changing images endpoint to a public S3 bucket"
+git commit -m "changing images endpoint to a public S3 bucket or text"
 ```
 
 - And finally, push the changes to the Heroku repository, that is going to deploy the application as well:
@@ -387,7 +406,7 @@ heroku logs --tail
 
 ## 4.- Manage / configure resources 
 
-Heroku works with dyno that is a lightweight container (a tiny virtual machine) that runs the command specified in a configuration file (in this case the Procfile)
+Heroku works with dyno that is a lightweight [container](https://en.wikipedia.org/wiki/Operating-system-level_virtualization) (or also you can think that is a tiny [virtual machine](https://en.wikipedia.org/wiki/Virtual_machine)) that runs the command specified in a configuration file (in this case the Procfile)
 
 By default, your app is deployed on a free dyno. Free dynos will sleep after a half hour of inactivity (if they don’t receive any traffic). This causes a delay of a few seconds for the first request upon waking. 
 
@@ -413,4 +432,4 @@ heroku ps:scale web=0
 
 Access the app again by hitting refresh on the web tab, or heroku open to open it in a web tab.
 
-If everything goes good you have learnt the basic step about how to start the DevOps journey building an application based on a Platform as a Service cloud solution!! congratulations!!!
+If everything goes good you have learnt the basic step about how to start the [DevOps](https://en.wikipedia.org/wiki/DevOps) journey building an application based on a Platform as a Service cloud solution!! congratulations!!!
